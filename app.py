@@ -15,8 +15,8 @@ with st.container():
         st.header("This is a column;")
         st.write("something..")
         st.write("""HELLO ALL!!!
-        -This is our project
-        -line1
-        -line2
-        -line3""")
+        \n-This is our project
+        \n-line1
+        \n-line2
+        \n-line3""")
         st.write("other things...")
