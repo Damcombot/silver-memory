@@ -1,4 +1,11 @@
 import streamlit as st
+
+
+#code---
+
+st.set_page_config(page_title="AI Project",page_icon=":open_book:",layout="wide")
+
+#hidder--
 hide_streamlit_style = """
 <style>
 #MainMenu {visibility: hidden;}
@@ -7,10 +14,6 @@ footer {visibility: hidden;}
 """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
-
-#code---
-
-st.set_page_config(page_title="AI Project",page_icon=":open_book:",layout="wide")
 
 #Header---
 with st.container():
