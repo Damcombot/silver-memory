@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.set_page_config(page_title="AI Project",page_icon=":joy:",layout="wide")
+st.set_page_config(page_title="AI Project",page_icon=":open_book:",layout="wide")
 
 #Header---
 with st.container():
@@ -16,7 +16,10 @@ with st.container():
         st.write("something..")
         st.write("""HELLO ALL!!!
         -This is our project
+        
         -line1
+        
         -line2
+        
         -line3""")
         st.write("other things...")
