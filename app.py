@@ -10,3 +10,13 @@ with st.container():
 
 with st.container():
     st.write("---")
+    left_column,right_column = st.columns(2)
+    with left_column:
+        st.header("This is a column;")
+        st.write("something..")
+        st.write("""HELLO ALL!!!
+                 -This is our project
+                 -line1
+                 -line2
+                 -line3""")
+        st.write("other things...")
