@@ -33,11 +33,5 @@ with st.container():
 with st.container():
     left_column,right_column = st.columns(2)
     with left_column:
-        st.subheader("It uses :blue-background[NLP] and :red-background[CV]")
-        st.write("It can predict the ***presence*** of user ")
-        st.write("""These are the _*members*_ of our AI project :
-        \n-This is our project
-        \n-line1
-        \n-line2
-        \n-line3""")
-        st.write("other things...")
+        st.subheader("It uses :blue-background[NLP] and :red-background[CV] .")
+        st.write("It can predict the ***presence*** of user .")
