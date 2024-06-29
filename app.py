@@ -39,6 +39,7 @@ print("this ia an example")"""
 with st.container():
             st.code(code,line_numbers=True)
 with st.echo:
-            def example:
+            def example():
               print("This works!!")
+            example()
             
