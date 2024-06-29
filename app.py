@@ -50,7 +50,7 @@ st.code("""def fun():
          print(5+6)""")
 
 #image2---
-col1, _, col2 = st.beta_columns([1, 1, 20])
+col1, _, col2 = st.columns([1, 1, 20])
 st.image(image_path,use_column_width=False)
 st.write("Random Text")
 
