@@ -3,7 +3,7 @@ import streamlit as st
 
 #code---
 
-st.set_page_config(page_title="Vadarly",page_icon=":dependabot:",layout="wide")
+st.set_page_config(page_title="Vadarly",page_icon=":part_alternation_mark:",layout="wide")
 
 #hidder--
 hide_streamlit_style = """
