@@ -29,7 +29,7 @@ st.markdown(hide_github_icon, unsafe_allow_html=True)
 with st.container():
             st.title(""" Welcome to _:blue[Vadarly]_ """)
             st.subheader("Vadarly is a _voice assistant_ ")
-            st.write(---)
+            st.write("---")
 with st.container():
     left_column,right_column = st.columns(2)
     with left_column:
