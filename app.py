@@ -13,22 +13,6 @@ hide_streamlit_style = """
             </style>
             """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
-#hidder-bar---
-import streamlit as st
-
-hide_streamlit_style = """
-<style>
-#root > div:nth-child(1) > div > div > div > div > section > div {
-    padding-top: 0rem;
-}
-</style>
-"""
-
-st.title("Your App Title")
-if st.checkbox('Remove padding'):
-    st.markdown(hide_streamlit_style, unsafe_allow_html=True)
-
-
 #hidder2--
 hide_github_icon = """
 <style>
