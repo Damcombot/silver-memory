@@ -33,5 +33,5 @@ with st.container():
 with st.container():
     left_column,right_column = st.columns(2)
     with left_column:
-        st.write_stream("It uses :blue-background[NLP] and :red-background[CV] ")
-        st.write_stream("It can predict the ***presence*** of user ")
+        st.write("It uses :blue-background[NLP] and :red-background[CV] ")
+        st.write("It can predict the ***presence*** of user ")
