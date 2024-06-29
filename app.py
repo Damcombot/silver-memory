@@ -36,6 +36,6 @@ with st.container():
                         st.write("It can predict the ***presence*** of user ")
 with st.echo():
             def example():
-              print("This works!!")
+              return "This works!!"
 example()
             
