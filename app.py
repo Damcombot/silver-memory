@@ -27,9 +27,8 @@ st.markdown(hide_github_icon, unsafe_allow_html=True)
 
 #Header---
 with st.container():
-            st.title(""" _:blue[Vadarly]_ :bangbang:""")
-            st.subheader("Hi!,Welcome to our AI project")
-            
+            st.title(""" Welcome to _:blue[Vadarly]_ """)
+            st.subheader("Vadarly is a _voice assistant_ ")
             st.write("[Learn more >](https://blinderoggy.wixsite.com/vadarly)")
 
 with st.container():
