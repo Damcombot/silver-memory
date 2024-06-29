@@ -4,6 +4,15 @@ import streamlit as st
 #code---
 
 st.set_page_config(page_title="Vadarly",page_icon=":part_alternation_mark:",layout="wide")
+
+#image---
+
+# Load your image (you can use a local file path or a URL)
+image_path = "C:\Users\Jmbli\OneDrive\Documents\GitHub\silver-memory\Images\hellopic.png"  # Replace with your actual image path or URL
+
+# Display the image
+st.image(image_path, caption="Test image", width=300)  # Adjust width as needed
+
 #hidder--
 hide_streamlit_style = """
             <style>
@@ -33,8 +42,6 @@ with st.container():
             with left_column:
                         st.write("It uses :blue-background[NLP] and :red-background[CV] ")
                         st.write("It can predict the ***presence*** of user ")
-            image_column,text_column = st.columns((1,2))
-
 with st.echo():
             def example():
               return "This works!!"
