@@ -11,7 +11,7 @@ st.set_page_config(page_title="Vadarly",page_icon=":part_alternation_mark:",layo
 image_path = "C:\Users\Jmbli\OneDrive\Documents\GitHub\silver-memory\Images\hellopic.png"  # Replace with your actual image path or URL
 
 # Display the image
-st.image(image_path, caption="Test image", width=300)  # Adjust width as needed
+st.image(image_path, caption="Test image")  # Adjust width as needed
 
 #hidder--
 hide_streamlit_style = """
