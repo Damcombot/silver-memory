@@ -30,7 +30,12 @@ with st.container():
             st.header("Vadarly is a ***voice assistant*** ")
             st.divider()
 with st.container():
-    left_column,right_column = st.columns(2)
-    with left_column:
-        st.write("It uses :blue-background[NLP] and :red-background[CV] ")
-        st.write("It can predict the ***presence*** of user ")
+            left_column,right_column = st.columns(2)
+            with left_column:
+                        st.write("It uses :blue-background[NLP] and :red-background[CV] ")
+                        st.write("It can predict the ***presence*** of user ")
+code="""def example:
+            print("this ia an example")"""
+with st.container():
+            st.code(code,line_numbers=True)
+            
