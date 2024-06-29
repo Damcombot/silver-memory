@@ -7,11 +7,7 @@ st.set_page_config(page_title="Vadarly",page_icon=":part_alternation_mark:",layo
 
 #image---
 
-# Load your image (you can use a local file path or a URL)
-image_path = "C:\Users\Jmbli\Pictures\Screenshots\Screenshot 2023-10-08 165638.png" 
 
-# Display the image
-st.image(image_path, caption="Test image")  # Adjust width as needed
 
 #hidder--
 hide_streamlit_style = """
