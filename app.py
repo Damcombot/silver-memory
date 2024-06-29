@@ -7,7 +7,7 @@ st.set_page_config(page_title="Vadarly",page_icon=":part_alternation_mark:",layo
 
 #image---
 image_path= "https://th.bing.com/th/id/OIP._dP2SPVcLwJ-r_uKSsbpkwHaEK?rs=1&pid=ImgDetMain"
-st.image(image_path,use_column_width=False)
+
 
 #hidder--
 hide_streamlit_style = """
@@ -49,6 +49,10 @@ with st.container():
 st.code("""def fun():
          print(5+6)""")
 
+#image2---
+col1, _, col2 = st.beta_columns([1, 1, 20])
+st.image(image_path,use_column_width=False)
+st.write("Random Text")
 
 
 
