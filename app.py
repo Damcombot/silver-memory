@@ -5,7 +5,7 @@ from PIL import Image
 #code---
 
 st.set_page_config(page_title="Vadarly",page_icon=":part_alternation_mark:",layout="wide")
-img_contact= Image.open("C:\Users\Jmbli\OneDrive\Documents\GitHub\silver-memory\Images\hellopic.jpeg")
+img_contact= Image.open("C:\Users\Jmbli\OneDrive\Documents\GitHub\silver-memory\Images\hellopic.png")
 
 #hidder--
 hide_streamlit_style = """
