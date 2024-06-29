@@ -38,4 +38,5 @@ with st.echo():
             def example():
               print("This works!!")
             example()
+            st.write(example())
             
