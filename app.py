@@ -46,6 +46,9 @@ with st.container():
     #st.image(picture)
 
 #code-box--
+st.code("""def fun():
+         print(5+6)""")
+
 
 
 
