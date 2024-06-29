@@ -48,6 +48,11 @@ with st.container():
 #code-box--
 st.code("""def fun():
          print(5+6)""")
+#code-box2--
+with st.echo():
+            def example():
+              return "This works!!"
+            st.write(example())
 
 #image1---
 col1 , col2 = st.columns([2, 1])
