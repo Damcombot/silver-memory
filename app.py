@@ -6,7 +6,7 @@ import streamlit as st
 st.set_page_config(page_title="Vadarly",page_icon=":part_alternation_mark:",layout="wide")
 
 #image---
-image_path= https://th.bing.com/th/id/OIP._dP2SPVcLwJ-r_uKSsbpkwHaEK?rs=1&pid=ImgDetMain
+image_path= "https://th.bing.com/th/id/OIP._dP2SPVcLwJ-r_uKSsbpkwHaEK?rs=1&pid=ImgDetMain"
 st.image(image_path,use_column_width=True)
 
 #hidder--
