@@ -29,13 +29,13 @@ st.markdown(hide_github_icon, unsafe_allow_html=True)
 with st.container():
             st.title(""" Welcome to _:blue[Vadarly]_ """)
             st.subheader("Vadarly is a _voice assistant_ ")
+            st.write(---)
 with st.container():
-    
     left_column,right_column = st.columns(2)
     with left_column:
-        st.header("This is a column;")
-        st.write("something..")
-        st.write("""HELLO ALL!!!
+        st.header("It uses :blue-background[NLP] and :orange-background[CV]")
+        st.write("It can predict the presence of user and activates if user is present")
+        st.write("""These are the members of our AI project :
         \n-This is our project
         \n-line1
         \n-line2
