@@ -2,6 +2,7 @@ import speech_recognition as sr
 import pyttsx3
 import datetime
 import wikipedia
+import sys
 
 # Initialize speech recognition and text-to-speech engines
 recognizer = sr.Recognizer()
@@ -58,16 +59,17 @@ def respond(command):
     elif "search" in command:
         speak("What would you like me to search for?")
         query = listen()
-        try:
+        if query :
+         try:
             results = wikipedia.summary(query, sentences=2)
             speak("According to Wikipedia, " + results)
-        except wikipedia.exceptions.DisambiguationError:
+         except wikipedia.exceptions.DisambiguationError:
             speak("There are multiple interpretations for " + query + ". Please be more specific.")
-        except wikipedia.exceptions.PageError:
+         except wikipedia.exceptions.PageError:
             speak("Sorry, I couldn't find any information about " + query)
     elif "goodbye" in command or "bye" in command:
         speak("Goodbye! Have a great day.")
-        exit()
+        sys.exit()
     else:
         speak("Sorry, I didn't understand that command. Can you please repeat?")
 
