@@ -8,7 +8,7 @@ st.set_page_config(page_title="Vadarly",page_icon=":part_alternation_mark:",layo
 #image---
 
 # Load your image (you can use a local file path or a URL)
-image_path = "C:\Users\Jmbli\OneDrive\Documents\GitHub\silver-memory\Images\hellopic.png"  # Replace with your actual image path or URL
+image_path = "C:\Users\Jmbli\OneDrive\Documents\GitHub\silver-memory\Images\hellopic.png"  
 
 # Display the image
 st.image(image_path, caption="Test image")  # Adjust width as needed
