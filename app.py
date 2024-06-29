@@ -6,7 +6,7 @@ import streamlit as st
 st.set_page_config(page_title="Vadarly",page_icon=":part_alternation_mark:",layout="wide")
 
 #image---
-image_path= r"C:\Users\Jmbli\OneDrive\Documents\GitHub\silver-memory\Images\hellopic.png"
+image_path= r"C:\Users\Jmbli\Desktop\hellopic.png"
 st.image(image_path,use_column_width=True)
 
 #hidder--
