@@ -7,7 +7,7 @@ st.set_page_config(page_title="Vadarly",page_icon=":part_alternation_mark:",layo
 
 #image---
 
-
+st.image("C:\Users\Jmbli\OneDrive\Documents\GitHub\silver-memory\Images\hellopic.png")
 
 #hidder--
 hide_streamlit_style = """
@@ -38,10 +38,12 @@ with st.container():
             with left_column:
                         st.write("It uses :blue-background[NLP] and :red-background[CV] ")
                         st.write("It can predict the ***presence*** of user ")
-                        
+#camera-roll-test--                       
 picture = st.camera_input("Take a picture")
 
 if picture:
     st.image(picture)
+#code-box--
+
 
 
