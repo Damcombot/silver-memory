@@ -37,5 +37,5 @@ with st.container():
 with st.echo():
             def example():
               print("This works!!")
-            example()
+example()
             
