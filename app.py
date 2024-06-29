@@ -10,13 +10,13 @@ image_path= "https://th.bing.com/th/id/OIP._dP2SPVcLwJ-r_uKSsbpkwHaEK?rs=1&pid=I
 st.image(image_path,use_column_width=False)
 
 #hidder--
-hide_streamlit_style = """
-            <style>
-            [data-testid="stToolbar"] {visibility: hidden !important;}
-            footer {visibility: hidden !important;}
-            </style>
-            """
-st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+#hide_streamlit_style = """
+            #<style>
+            #[data-testid="stToolbar"] {visibility: hidden !important;}
+            #footer {visibility: hidden !important;}
+            #</style>
+            #"""
+#st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 #hidder2--
 hide_github_icon = """
 <style>
