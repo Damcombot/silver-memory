@@ -35,7 +35,7 @@ with st.container():
                         st.write("It uses :blue-background[NLP] and :red-background[CV] ")
                         st.write("It can predict the ***presence*** of user ")
 code="""def example:
-            print("this ia an example")"""
+print("this ia an example")"""
 with st.container():
-            st.code(code,line_numbers=True)
+            st.echo(code,line_numbers=True)
             
