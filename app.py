@@ -52,7 +52,7 @@ st.code("""def fun():
 #image2---
 col1 , col2 = st.columns([1, 2])
 with col2:
-            st.image(image_path,use_column_width=False,captions="Just a normal image")
+            st.image(image_path,use_column_width=False,caption="Just a normal image")
 with col1:
             st.write("Random Text")
 
