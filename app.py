@@ -50,9 +50,11 @@ st.code("""def fun():
          print(5+6)""")
 
 #image2---
-col1, _, col2 = st.columns([1, 1, 20])
-st.image(image_path,use_column_width=False)
-st.write("Random Text")
+col1,col2 = st.columns([1, 20])
+with col2:
+            st.image(image_path,use_column_width=False)
+with col1:
+            st.write("Random Text")
 
 
 
