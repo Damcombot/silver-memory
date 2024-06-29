@@ -38,9 +38,5 @@ with st.container():
             with left_column:
                         st.write("It uses :blue-background[NLP] and :red-background[CV] ")
                         st.write("It can predict the ***presence*** of user ")
-#code-box--
-with st.echo():
-            def example():
-              return "This works!!"
-            st.write(example())
+
 
