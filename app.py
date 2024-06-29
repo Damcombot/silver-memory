@@ -3,7 +3,7 @@ import streamlit as st
 
 #code---
 
-st.set_page_config(page_title="AI Project",page_icon=":open_book:",layout="wide")
+st.set_page_config(page_title="Vadarly",page_icon=":infinity:",layout="wide")
 
 #hidder--
 hide_streamlit_style = """
