@@ -27,8 +27,9 @@ st.markdown(hide_github_icon, unsafe_allow_html=True)
 
 #Header---
 with st.container():
-            st.title("""It uses open cv and NLP to provide output""")
-            st.subheader("Hi!,Welcome to our AI project :wave:")
+            st.title(""" _:blue[Vadarly]_ :bangbang:""")
+            st.subheader("Hi!,Welcome to our AI project")
+            
             st.write("[Learn more >](https://blinderoggy.wixsite.com/vadarly)")
 
 with st.container():
