@@ -1,7 +1,6 @@
 import streamlit as st
 import subprocess
 import speech_recognition as sr
-import pyttsx3
 import datetime
 import wikipedia
 import sys
