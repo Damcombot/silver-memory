@@ -141,7 +141,7 @@ with col1:
 
 
 st.button("Reset", type="primary")
-if st.button("Say hello"):
-    st.write("Why hello there")
+if st.button("ask something"):
+    st.write("listening")
 else:
     st.write("Goodbye")
