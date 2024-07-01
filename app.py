@@ -139,5 +139,5 @@ with col1:
 
 #Voice assistant button-----
 if st.button("_***Activate voice assistant***_", type="primary"):
-    st.write(" ***:green[starting voice assistant ........]***")
+    st.write(" ***:green[Staring Voice Assistant ........]***")
 
