@@ -143,6 +143,5 @@ with col1:
 #Voice assistant button-----
 if st.button("_***Activate voice assistant***_", type="primary"):
             st.write(" ***:green[Staring Voice Assistant ........]***")
-            subprocess.run([f"{sys.executable}","https://github.com/Damcombot/silver-memory/blob/main/REal%20AI%20project.py"])
-            subprocess.run(["python",'https://github.com/Damcombot/silver-memory/blob/main/REal%20AI%20project.py'])
-
+            st.write(9+63)
+            
