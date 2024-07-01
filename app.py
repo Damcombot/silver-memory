@@ -13,9 +13,10 @@ if mo:
     mo = st.audio(mo, format="audio/wav")
 # Function to recognize speech from audio file
 def recognize_speech_from_audio_file(file):
+    r=sr.recognizer()
     with mo as source:
         audio_data = mo
-        text = sr.recognize_google(audio_data)
+        text = r.recognize_google(audio_data)
         return text
 
 # Function to respond to commands
