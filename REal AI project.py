@@ -6,7 +6,7 @@ import sys
 
 # Initialize speech recognition and text-to-speech engines
 recognizer = sr.Recognizer()
-engine = pyttsx3.init()
+engine = pyttsx3.init('sapi5')
 
 # Function to speak out the given text
 def speak(text):
