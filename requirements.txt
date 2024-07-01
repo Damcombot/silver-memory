@@ -2,4 +2,3 @@ SpeechRecognition
 pyttsx3
 datetime
 Wikipedia
-comtypes
