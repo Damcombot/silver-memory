@@ -7,7 +7,7 @@ import wikipedia
 import sys
 
 # Initialize speech recognition and text-to-speech engines
-recognizer = st.audio()
+recognizer = sr.Recognizer()
 engine = pyttsx3.init()
 
 # Function to speak out the given text
