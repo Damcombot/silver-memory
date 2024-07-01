@@ -1,5 +1,34 @@
 import streamlit as st
 
+st.set_page_config(layout="wide")
+
+# Custom HTML/CSS for the banner
+custom_html = """
+<div class="banner">
+    <img src=""D:\Jmbli\Documents\WhatsApp Image 2024-07-01 at 17.56.15_d1d72851.jpg"" alt="Banner Image">
+</div>
+<style>
+    .banner {
+        width: 160%;
+        height: 200px;
+        overflow: hidden;
+    }
+    .banner img {
+        width: 100%;
+        object-fit: cover;
+    }
+</style>
+"""
+
+# Display the custom HTML
+st.components.v1.html(custom_html)
+
+# Sidebar content (optional)
+st.sidebar.header("Sidebar Title")
+st.sidebar.subheader("Subheading")
+st.sidebar.text("Sidebar content goes here.")
+
+
 
 #code---
 
