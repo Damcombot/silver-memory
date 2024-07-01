@@ -135,7 +135,7 @@ if __name__ == "__main__":
 #image1---
 col1 , col2 = st.columns([2, 1])
 with col2:
-            st.image(image_path,caption="Just a normal image")
+            st.image(image_path,caption="")
 with col1:
             st.write("Random Text")
 
