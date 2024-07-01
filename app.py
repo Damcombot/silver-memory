@@ -144,6 +144,6 @@ with col1:
 if st.button("_***Activate voice assistant***_", type="primary"):
             st.write(" ***:green[Staring Voice Assistant ........]***")
 
-subprocess.run([f"{sys.executable}","C:\Users\Jmbli\OneDrive\Documents\GitHub\silver-memory\REal AI project.py"])
+subprocess.run([f"{sys.executable}","https://github.com/Damcombot/silver-memory/blob/main/REal%20AI%20project.py"])
 
 
