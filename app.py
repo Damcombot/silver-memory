@@ -6,6 +6,7 @@ import wikipedia
 import sys
 import audio_recorder_streamlit 
 # Initialize speech recognition and text-to-speech engines
+st.set_page_config(page_title="Vadarly",page_icon=":part_alternation_mark:",layout="wide")
 
 
 # Function to recognize speech from audio file
@@ -57,7 +58,7 @@ if __name__ == "__main__":
 
 #code---
 
-st.set_page_config(page_title="Vadarly",page_icon=":part_alternation_mark:",layout="wide")
+
 
 #images store---
 image_path= "https://th.bing.com/th/id/OIP._dP2SPVcLwJ-r_uKSsbpkwHaEK?rs=1&pid=ImgDetMain"
