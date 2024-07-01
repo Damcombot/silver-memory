@@ -1,6 +1,6 @@
 from openai import OpenAI
 import streamlit as st
-
+st.set_page_config(page_title="Vadarly",page_icon=":part_alternation_mark:",layout="wide")
 with st.sidebar:
     openai_api_key = st.text_input("OpenAI API Key", key="chatbot_api_key", type="password")
     "[Get an OpenAI API key](https://platform.openai.com/account/api-keys)"
