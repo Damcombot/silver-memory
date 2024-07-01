@@ -15,7 +15,7 @@ if a:
 def recognize_speech_from_audio_file(file):
     with mo as source:
         audio_data = mo
-        text = r.recognize_google(audio_data)
+        text = mo.recognize_google(audio_data)
         return text
 
 # Function to respond to commands
