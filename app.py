@@ -137,11 +137,8 @@ with col2:
 with col1:
             st.write("Random Text")
 
-
-
-
-st.button("***Activate*** voice assistant", type="primary")
-if st.button("ask something"):
+#Voice assistant button-----
+if st.button("***Activate*** voice assistant", type="primary"):
     st.write("listening")
 else:
     st.write("Goodbye")
