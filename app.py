@@ -140,7 +140,7 @@ with col1:
 
 
 
-st.button("Reset", type="primary")
+st.button("***Activate*** voice assistant", type="primary")
 if st.button("ask something"):
     st.write("listening")
 else:
