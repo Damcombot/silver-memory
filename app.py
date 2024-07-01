@@ -5,16 +5,16 @@ import datetime
 import wikipedia
 import sys
 from audio_recorder_streamlit import audio_recorder
+
 # Initialize speech recognition and text-to-speech engines
 st.set_page_config(page_title="Vadarly",page_icon=":part_alternation_mark:",layout="wide")
 a=audio_recorder()
 if a:
-    st.audio(a, format="audio/wav")
+    mo = st.audio(a, format="audio/wav")
 # Function to recognize speech from audio file
 def recognize_speech_from_audio_file(file):
-    r = sr.Recognizer()
-    with sr.AudioFile(file) as source:
-        audio_data = r.record(source)
+    with mo as source:
+        audio_data = mo
         text = r.recognize_google(audio_data)
         return text
 
@@ -45,8 +45,7 @@ def respond(command):
 
 # Main function to execute the assistant
 def main():
-    st.title('Voice Assistant')
-    uploaded_file = st.file_uploader("Choose an audio file", type=['wav', 'flac'])
+    uploaded_file = mo
     if uploaded_file is not None:
         command = recognize_speech_from_audio_file(uploaded_file)
         st.write(f"You said: {command}")
