@@ -5,7 +5,7 @@ import pyttsx3
 import datetime
 import wikipedia
 import sys
-
+import audio_recorder_streamlit 
 # Initialize speech recognition and text-to-speech engines
 recognizer = sr.Recognizer()
 engine = pyttsx3.init()
