@@ -138,6 +138,6 @@ with col1:
             st.write("Random Text")
 
 #Voice assistant button-----
-if st.button("***Activate voice assistant***", type="primary"):
-    st.write(" :green[starting voice assistant ........]")
+if st.button("_***Activate voice assistant***_", type="primary"):
+    st.write(" ***:green[starting voice assistant ........]***")
 
