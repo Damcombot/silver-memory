@@ -146,6 +146,6 @@ if st.button("_***Activate voice assistant***_", type="primary"):
             subprocess.run([f"{sys.executable}","https:\\github.com\Damcombot\silver-memory\blob\main\REal%20AI%20project.py" ])
 
 #sidebar
-ith st.sidebar:
+with st.sidebar:
     openai_api_key = st.text_input("OpenAI API Key", key="chatbot_api_key", type="password")
     
