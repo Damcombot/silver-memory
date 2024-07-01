@@ -2,5 +2,4 @@ SpeechRecognition
 pyttsx3
 datetime
 Wikipedia
-espeak
-libespeak-dev
+
