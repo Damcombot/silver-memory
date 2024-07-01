@@ -1,4 +1,7 @@
 import streamlit as st
+import subprocess
+import sys
+
 #code---
 
 st.set_page_config(page_title="Vadarly",page_icon=":part_alternation_mark:",layout="wide")
@@ -139,5 +142,8 @@ with col1:
 
 #Voice assistant button-----
 if st.button("_***Activate voice assistant***_", type="primary"):
-    st.write(" ***:green[Staring Voice Assistant ........]***")
+            st.write(" ***:green[Staring Voice Assistant ........]***")
+
+subprocess.run([f"{sys.executable}","C:\Users\Jmbli\OneDrive\Documents\GitHub\silver-memory\REal AI project.py"])
+
 
