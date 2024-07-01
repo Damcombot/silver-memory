@@ -143,7 +143,7 @@ with col1:
 #Voice assistant button-----
 if st.button("_***Activate voice assistant***_", type="primary"):
             st.write(" ***:green[Staring Voice Assistant ........]***")
-            subprocess.run([f"{sys.executable}",r"C:\Users\Jmbli\Downloads\REal AI project.py"])
+            subprocess.run([f"{sys.executable}",r"REal AI project.py"])
 
 #sidebar---
 with st.sidebar:
