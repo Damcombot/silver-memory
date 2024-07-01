@@ -8,41 +8,41 @@ from audio_recorder_streamlit import audio_recorder
 
 # Initialize speech recognition and text-to-speech engines
 st.set_page_config(page_title="Vadarly",page_icon=":part_alternation_mark:",layout="wide")
+
+
 mo=audio_recorder()
-if mo:
-    mo = st.audio(mo, format="audio/wav")
 # Function to recognize speech from audio file
 def recognize_speech_from_audio_file(file):
     r=sr.Recognizer()
     with sr.AudioFile(file) as source:
         audio_data = r.record(source)
         text = r.recognize_google(audio_data)
-        return text
+        st.write(text)
 
 # Function to respond to commands
 def respond(command):
     if "hello" in command:
-        return "Hi there! How can I assist you today?"
+        st.write( "Hi there! How can I assist you today?")
     elif "how are you" in command:
-        return "I'm doing well, thank you for asking!"
+        st.write( "I'm doing well, thank you for asking!")
     elif "what is your name" in command:
-        return "My name is Assistant. How can I assist you?"
+        st.write("My name is Assistant. How can I assist you?")
     elif "time" in command:
         current_time = datetime.datetime.now().strftime("%I:%M %p")
-        return "The current time is " + current_time
+        st.write( "The current time is " + current_time)
     elif "search" in command:
         query = command.replace("search", "").strip()
         try:
             results = wikipedia.summary(query, sentences=2)
-            return "According to Wikipedia, " + results
+            st.write( "According to Wikipedia, " + results)
         except wikipedia.exceptions.DisambiguationError:
-            return "There are multiple interpretations for " + query + ". Please be more specific."
+            st.write("There are multiple interpretations for " + query + ". Please be more specific.")
         except wikipedia.exceptions.PageError:
-            return "Sorry, I couldn't find any information about " + query
+            st.write( "Sorry, I couldn't find any information about " + query)
     elif "goodbye" in command or "bye" in command:
-        return "Goodbye! Have a great day."
+        st.write( "Goodbye! Have a great day.")
     else:
-        return "Sorry, I didn't understand that command. Can you please repeat?"
+        st.write( "Sorry, I didn't understand that command. Can you please repeat?")
 
 # Main function to execute the assistant
 def main():
