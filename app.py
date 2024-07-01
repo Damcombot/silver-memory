@@ -9,7 +9,7 @@ from audio_recorder_streamlit import audio_recorder
 st.set_page_config(page_title="Vadarly",page_icon=":part_alternation_mark:",layout="wide")
 a=audio_recorder()
 if a:
-    st.audio(audio_bytes, format="audio/wav")
+    st.audio(a, format="audio/wav")
 # Function to recognize speech from audio file
 def recognize_speech_from_audio_file(file):
     r = sr.Recognizer()
