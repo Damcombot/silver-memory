@@ -8,9 +8,9 @@ from audio_recorder_streamlit import audio_recorder
 
 # Initialize speech recognition and text-to-speech engines
 st.set_page_config(page_title="Vadarly",page_icon=":part_alternation_mark:",layout="wide")
-a=audio_recorder()
-if a:
-    mo = st.audio(a, format="audio/wav")
+mo=audio_recorder()
+if mo:
+    mo = st.audio(mo, format="audio/wav")
 # Function to recognize speech from audio file
 def recognize_speech_from_audio_file(file):
     with mo as source:
