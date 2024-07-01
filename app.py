@@ -40,10 +40,10 @@ with st.container():
                         st.write("It can predict the ***presence*** of user ")
 #camera-roll-test-- 
 
-#picture = st.camera_input("Take a picture")
+picture = st.camera_input("Take a picture")
 
-#if picture:
-    #st.image(picture)
+if picture:
+    st.image(picture)
 
 #code-box--
 st.code("""def fun():
