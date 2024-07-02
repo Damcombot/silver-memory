@@ -149,6 +149,5 @@ def slow_type(text, delay=0.1):
 st.write(slow_type("Type whatever you want here"))
 
 #sidebar---
-with st.sidebar:
-    openai_api_key = st.text_input("OpenAI API Key", key="chatbot_api_key", type="password")
+
     
