@@ -37,7 +37,7 @@ st.markdown(hide_github_icon, unsafe_allow_html=True)
 
 
 #logo---
-with st_lottie("C:\Users\Jmbli\Downloads\Animation - 1719942776885.json"):
+with st_lottie(r"C:\Users\Jmbli\Downloads\Animation - 1719942776885.json"):
     time.sleep(5)
 
 
