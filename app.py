@@ -42,7 +42,7 @@ st.markdown(hide_github_icon, unsafe_allow_html=True)
 url = "file:///C:/Users/Jmbli/Downloads/Animation%20-%201719944971565%20(1).json"
 
 # Display the animation
-st_lottie(url, speed=1)
+
 
 #Header---
 with st.container():
@@ -159,5 +159,5 @@ with col1:
 
 
 #sidebar---
-
+st_lottie(url, speed=1)
     
