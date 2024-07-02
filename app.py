@@ -3,6 +3,14 @@ import time
 
 # Initialize speech recognition and text-to-speech engines
 st.set_page_config(page_title="Vadarly",page_icon=":part_alternation_mark:",layout="wide")
+#slow--
+def typewriter(text: str, speed: int):
+    tokens = text.split()
+    container = st.empty()
+    for index in range(len(tokens) + 1):
+        curr_full_text = " ".join(tokens[:index])
+        container.markdown(curr_full_text)
+        time.sleep(1 / speed)
 
 #images store---
 image_path= "https://th.bing.com/th/id/OIP._dP2SPVcLwJ-r_uKSsbpkwHaEK?rs=1&pid=ImgDetMain"
@@ -138,15 +146,10 @@ with col2:
 with col1:
             st.write("Random Text")
 
-#Voice assistant button-----
-def slow_type(text, delay=0.1):
-    for char in text:
-        sys.stdout.write(char)
-        sys.stdout.flush()
-        time.sleep(delay)
+
 
 # Example usage:
-st.write(slow_type("Type whatever you want here"))
+typewriter("hello all this the web !!!",1)
 
 #sidebar---
 
