@@ -35,6 +35,10 @@ hide_github_icon = """
 st.markdown(hide_github_icon, unsafe_allow_html=True)
 
 
+#logo---
+
+st.logo(LOGO_URL_LARGE, link="https://streamlit.io/gallery", icon_image=LOGO_URL_SMALL)
+
 #Header---
 with st.container():
             st.title(""" Welcome to _:blue[Vadarly]_ """)
