@@ -1,6 +1,7 @@
 import streamlit as st
 import time
 from streamlit_lottie import st_lottie
+from streamlit.runtime.scriptrunner.script_run_context import get_script_run_ctx as get_report_ctx
 
 
 # Initialize speech recognition and text-to-speech engines
