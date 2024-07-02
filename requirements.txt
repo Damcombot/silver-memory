@@ -1,7 +1,1 @@
-SpeechRecognition
-pyttsx3
-datetime
-Wikipedia
-audio_recorder_streamlit
-openai
-
+time
