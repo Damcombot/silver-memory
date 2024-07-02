@@ -16,7 +16,7 @@ def typewriter(text: str, speed: int):
 #images store---
 image_path= "https://mindmatters.ai/wp-content/uploads/sites/2/2020/10/artificial-intelligence-composition-on-the-subject-of-future-technologies-3d-rendered-graphics-stockpack-adobe-stock-scaled.jpg"
 
-st.logo("https://c8.alamy.com/comp/2M3N868/robot-logo-icon-bot-sign-design-chatbot-symbol-concept-voice-support-service-bot-online-support-bot-modern-flat-style-cartoon-vector-character-2M3N868.jpg")
+
 #hidder--
 hide_streamlit_style = """
             <style>
@@ -37,7 +37,7 @@ st.markdown(hide_github_icon, unsafe_allow_html=True)
 
 
 #logo---
-with st_lottie(r"C:\Users\Jmbli\Downloads\Animation - 1719942776885.json"):
+with st_lottie(r"C:\Users\Jmbli\Downloads\entity0984739.json"):
     time.sleep(5)
 
 
