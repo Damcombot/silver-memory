@@ -37,7 +37,7 @@ st.markdown(hide_github_icon, unsafe_allow_html=True)
 
 #logo---
 
-st.logo(LOGO_URL_LARGE, link="https://images.wallpapersden.com/image/download/cool-circuit-hd-motherboard_bG5naWyUmZqaraWkpJRmbmdlrWZnZWU.jpg", icon_image=LOGO_URL_SMALL)
+st.logo("https://images.wallpapersden.com/image/download/cool-circuit-hd-motherboard_bG5naWyUmZqaraWkpJRmbmdlrWZnZWU.jpg", icon_image=main_body_logo)
 
 #Header---
 with st.container():
