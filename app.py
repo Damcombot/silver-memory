@@ -1,65 +1,8 @@
 import streamlit as st
-import subprocess
-import speech_recognition as sr
-import datetime
-import wikipedia
-import sys
-from audio_recorder_streamlit import audio_recorder
+import time
 
 # Initialize speech recognition and text-to-speech engines
 st.set_page_config(page_title="Vadarly",page_icon=":part_alternation_mark:",layout="wide")
-
-
-mo=audio_recorder()
-# Function to recognize speech from audio file
-def recognize_speech_from_audio_file(file):
-    r=sr.Recognizer()
-    with sr.AudioFile(file) as source:
-        audio_data = r.record(source)
-        text = r.recognize_google(audio_data)
-        st.write(text)
-
-# Function to respond to commands
-def respond(command):
-    if "hello" in command:
-        st.write( "Hi there! How can I assist you today?")
-    elif "how are you" in command:
-        st.write( "I'm doing well, thank you for asking!")
-    elif "what is your name" in command:
-        st.write("My name is Assistant. How can I assist you?")
-    elif "time" in command:
-        current_time = datetime.datetime.now().strftime("%I:%M %p")
-        st.write( "The current time is " + current_time)
-    elif "search" in command:
-        query = command.replace("search", "").strip()
-        try:
-            results = wikipedia.summary(query, sentences=2)
-            st.write( "According to Wikipedia, " + results)
-        except wikipedia.exceptions.DisambiguationError:
-            st.write("There are multiple interpretations for " + query + ". Please be more specific.")
-        except wikipedia.exceptions.PageError:
-            st.write( "Sorry, I couldn't find any information about " + query)
-    elif "goodbye" in command or "bye" in command:
-        st.write( "Goodbye! Have a great day.")
-    else:
-        st.write( "Sorry, I didn't understand that command. Can you please repeat?")
-
-# Main function to execute the assistant
-def main():
-    uploaded_file = mo
-    if uploaded_file is not None:
-        command = recognize_speech_from_audio_file(uploaded_file)
-        st.write(f"You said: {command}")
-        response = respond(command)
-        st.write(f"Assistant says: {response}")
-
-if __name__ == "__main__":
-    main()
-
-
-#code---
-
-
 
 #images store---
 image_path= "https://th.bing.com/th/id/OIP._dP2SPVcLwJ-r_uKSsbpkwHaEK?rs=1&pid=ImgDetMain"
@@ -196,8 +139,14 @@ with col1:
             st.write("Random Text")
 
 #Voice assistant button-----
-if st.button("_***Activate voice assistant***_", type="primary"):
-            st.write(" ***:green[Staring Voice Assistant ........]***")
+def slow_type(text, delay=0.1):
+    for char in text:
+        sys.stdout.write(char)
+        sys.stdout.flush()
+        time.sleep(delay)
+
+# Example usage:
+st.write(slow_type("Type whatever you want here"))
 
 #sidebar---
 with st.sidebar:
