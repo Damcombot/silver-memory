@@ -12,9 +12,8 @@ def typewriter(text: str, speed: int):
         curr_full_text = " ".join(tokens[:index])
         container.markdown(curr_full_text)
         time.sleep(1 / speed)
-typewriter("hello all this is me",7)
 #images store---
-image_path= "https://th.bing.com/th/id/OIP._dP2SPVcLwJ-r_uKSsbpkwHaEK?rs=1&pid=ImgDetMain"
+image_path= "https://mindmatters.ai/wp-content/uploads/sites/2/2020/10/artificial-intelligence-composition-on-the-subject-of-future-technologies-3d-rendered-graphics-stockpack-adobe-stock-scaled.jpg"
 
 
 #hidder--
