@@ -1,5 +1,6 @@
 import streamlit as st
 import time
+from streamlit_lottie import st_lottie
 
 
 # Initialize speech recognition and text-to-speech engines
@@ -36,8 +37,9 @@ st.markdown(hide_github_icon, unsafe_allow_html=True)
 
 
 #logo---
+with st_lottie("https://assets5.lottiefiles.com/packages/lf20_V9t630.json"):
+    time.sleep(5)
 
-st.logo(":part_alternation_mark:")
 
 #Header---
 with st.container():
