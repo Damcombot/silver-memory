@@ -37,7 +37,7 @@ st.markdown(hide_github_icon, unsafe_allow_html=True)
 
 
 #logo---
-with st_lottie("https://lottiefiles.com/free-animation/search-engine-ranking-animation-zV35kNcKHY"):
+with st.lottie("https://lottiefiles.com/free-animation/search-engine-ranking-animation-zV35kNcKHY"):
     time.sleep(5)
 
 
