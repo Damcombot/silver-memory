@@ -44,8 +44,8 @@ with st.container():
 with st.container():
             left_column,right_column = st.columns(2)
             with left_column:
-                        st.write("It uses :blue-background[NLP] and :red-background[CV] ")
-                        st.write("It can predict the ***presence*** of user ")
+                        typewriter("It uses :blue-background[NLP] and :red-background[CV] ",8)
+                        typewriter("It can predict the ***presence*** of user ",8)
 #camera-roll-test-- 
 
 #picture = st.camera_input("Take a picture")
