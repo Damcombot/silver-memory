@@ -150,7 +150,7 @@ def typewriter(text: str, speed: int):
         curr_full_text = " ".join(tokens[:index])
         container.markdown(curr_full_text)
         time.sleep(1 / speed)
-
+typewriter("hello all this is me",2)
 #sidebar---
 
     
