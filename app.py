@@ -38,9 +38,11 @@ st.markdown(hide_github_icon, unsafe_allow_html=True)
 
 
 #logo---
-with st_lottie(r"C:\Users\Jmbli\Downloads\entity0984739.json"):
-    time.sleep(5)
+# URL of the animation
+url = "https://lottiefiles.com/free-animation/voice-recognition-VryWbmp4wZ"
 
+# Display the animation
+st_lottie(url, speed=1)
 
 #Header---
 with st.container():
