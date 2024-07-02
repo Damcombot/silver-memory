@@ -37,7 +37,7 @@ st.markdown(hide_github_icon, unsafe_allow_html=True)
 
 #logo---
 
-st.logo(LOGO_URL_LARGE, link="https://streamlit.io/gallery", icon_image=LOGO_URL_SMALL)
+st.logo(LOGO_URL_LARGE, link="https://images.wallpapersden.com/image/download/cool-circuit-hd-motherboard_bG5naWyUmZqaraWkpJRmbmdlrWZnZWU.jpg", icon_image=LOGO_URL_SMALL)
 
 #Header---
 with st.container():
