@@ -43,8 +43,8 @@ with st.container():
 with st.container():
             left_column,right_column = st.columns(2)
             with left_column:
-                        typewriter("It uses :blue-background[NLP] and :red-background[CV] ",8)
-                        typewriter("It can predict the ***presence*** of user ",8)
+                        typewriter("It uses :blue-background[NLP] and :red-background[CV] ",30)
+                        typewriter("It can predict the ***presence*** of user ",30)
 #camera-roll-test-- 
 
 #picture = st.camera_input("Take a picture")
