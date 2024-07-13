@@ -1,0 +1,137 @@
+<html lang="en">
+    <meta charset="UTF-8">
+    <head>
+        <title>web</title>
+        <link rel="stylesheet" href="css.css">
+        <link rel="icon" type="image" href="C:\Users\Jmbli\Downloads\favicon (1).ico">
+    <head>
+    <body>
+        <div><!--hello guys!!-->
+            <h1 style="text-align: center; color:rgb(255, 255, 255); font-size:50px;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;background-color: rgba(120, 120, 120, 0.541);"title="My web"><b>Web</b></h1>
+            <hr>
+            <p style="color:rgb(255, 255, 255)"><b> Hello guys, this is my web<br> Page test....</b></p>
+            <a href="https://vadarly.streamlit.app" target="_blank">
+            <img src="C:\Users\Jmbli\Downloads\whatt.jpg" alt="this is a robot image" width="300" height="200" style="float:right;" >
+            </a>
+        </div>
+        <!--a small note between-->
+        
+        <div style="background-color: rgba(0, 0, 0, 0.497); color:rgb(255, 255, 255); padding:20px;">
+            <p><q><small>I recently discovered I could make fudge with just &#128512
+                chocolate chips, sweetened condensed milk, vanilla extract,
+                 and a thick pot on slow heat. I tried it with dark chocolate
+                chunks and I tried it with semi-sweet chocolate chips. It's
+                better <cite>Mmmm..</cite> with both kinds. It comes out pretty bad with just 
+                the dark chocolate. The best add-ins are crushed almonds 
+                and marshmallows -- what you get from that is Rocky Road.
+                It takes <abbr title="helloooooo">hello</abbr> about twenty minutes from start to fridge, 
+                and 
+                then it takes about six months to work off the twenty pound
+                 you gain from eating it. All things in moderation, friends.
+                 All things in moderation.</small></q></p>
+        </div>
+            <address style="color:rgb(255, 255, 255)">
+                <strong>-This is a small web</strong><br>
+                <em> by tharun</em>
+            </address>
+           <hr> 
+        <div style="font-size:30px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+            <p>Our code:</p>
+        </div>  
+        <div>
+            <img src="C:\Users\Jmbli\Downloads\robot.gif" alt="robot" width="300" height="150" style="float:right;" usemap="#mind">
+            <map name="mind">
+                <area shape="rect" coords="100,150,233,93,80,40,123,78" alt="robman" href="https://vadarly.streamlit.app" target="_blank">
+            </map>
+        </div>
+        <code>
+            <pre>
+import speech_recognition as sr
+import pyttsx3
+import datetime
+import wikipedia
+import sys
+# Initialize speech recognition and text-to-speech engines
+recognizer = sr.Recognizer()
+engine = pyttsx3.init('sapi5')
+
+# Function to speak out the given text
+def speak(text):
+    engine.say(text)
+    engine.runAndWait()
+
+# Function to listen for voice commands
+def listen():
+    with sr.Microphone() as source:
+        print("Listening...")
+        recognizer.adjust_for_ambient_noise(source)
+        audio = recognizer.listen(source)
+
+        try:
+            print("Recognizing...")
+            command = recognizer.recognize_google(audio)
+            print("You said:", command)
+            return command.lower()
+            except sr.UnknownValueError:
+                print("Sorry, I didn't catch that.")
+                return ""
+            except sr.RequestError as e:
+                print("Could not request results; {0}".format(e))
+                return ""
+            except Exception as ex:
+                print("Error:", ex)
+                return ""
+
+# Function to greet user
+def greet():
+    hour = datetime.datetime.now().hour
+    if 0 <= hour < 12:
+         speak("Good morning!")
+    elif 12 <= hour < 18:
+        speak("Good afternoon!")
+    else:
+        speak("Good evening!")
+
+# Function to respond to commands
+def respond(command):
+if "hello" in command:
+    speak("Hi there! How can I assist you today?")
+elif "how are you" in command:
+    speak("I'm doing well, thank you for asking!")
+elif "what is your name" in command:
+    speak("My name is Assistant. How can I assist you?")
+elif "time" in command:
+    current_time = datetime.datetime.now().strftime("%I:%M %p")
+    speak("The current time is " + current_time)
+elif "search" in command:
+    speak("What would you like me to search for?")
+    query = listen()
+    if query :
+        try:
+            results = wikipedia.summary(query, sentences=2)
+            speak("According to Wikipedia, " + results)
+            except wikipedia.exceptions.DisambiguationError:
+                speak("There are multiple interpretations for " + query + ". Please be more specific.")
+            except wikipedia.exceptions.PageError:
+                speak("Sorry, I couldn't find any information about " + query)
+            elif "goodbye" in command or "bye" in command:
+                speak("Goodbye! Have a great day.")
+                sys.exit()
+            else:
+                speak("Sorry, I didn't understand that command. Can you please repeat?")
+
+# Main function to execute the assistant
+def main():
+    greet()
+    while True:
+    command = listen()
+    respond(command)
+
+if __name__ == "__main__":
+    main()
+
+           
+            </pre>
+        </code>
+    </body>
+</html>
