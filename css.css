@@ -1,0 +1,38 @@
+
+body{
+    background-image:url("C:\\Users\\Jmbli\\Downloads\\R.jpeg");
+    background-repeat: repeat;
+    background-size:cover;
+    background-attachment:fixed;
+    color:white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+div{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+}
+code{
+    font-size: 20px;
+    text-align:left;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+li{
+    font-size:2vw;
+    float: left;
+    margin:3px;
+    word-spacing: 2px;
+    padding:3px;
+}
+ul{
+    padding:1vw solid #17bf52;
+    text-overflow:none;
+    list-style-type: none;
+    background-color: #7777770f;
+    max-width: max-content;
+}
+ol{
+    list-style-type: none; 
+    background-color: #7777770f;
+    max-width: max-content;
+}
