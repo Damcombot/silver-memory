@@ -9,57 +9,39 @@ def menu1():
     )
     cur=con.cursor()
     print('select(1) to insert medicine details')
-    print('select (2) to delete medicine details')
-    print('select (3) to update a medicine details')
-    print('select (4) to search a medicine')
+    print('select (2) to update a medicine details')
+    print('select (3) to search a medicine')
     op=int(input('enter the choice:::::::::::::'))
     if  op==1:
-        print('insert medicine details')
-        med_id=int(input('enter medicine id:'))
-        med_name=input('enter the name of the medicine:')
-        category=input('enter the category:')
-        dose=input('enter the dosage in mg:')
-        manufacturer=input('enter the manufacturer:')
-        exp_dt=input('enter the exp date:')
-        price=input('enter the price of the medicine:')
-        stock=int(input('enter the no o stock'))
-        prescrip=int(input('enter 1 if priscription required  else 0'))
-        st="insert into medicines  values ('"+med_id+"','"+med_name+"','"+category+"','"+dose+"','"+manufacturer+"','"+exp_dt+"','"+price+"','"+stock+"','"+prescrip+"')"
-        cur.execute(st)
+        print('Insert medicine details')
+        med_id = int(input('Enter medicine ID: '))
+        med_name = input('Enter the name of the medicine: ')
+        category = input('Enter the category: ')
+        dose = input('Enter the dosage in mg: ')
+        manufacturer = input('Enter the manufacturer: ')
+        exp_dt = input('Enter the expiry date (YYYY-MM-DD): ')
+        price = float(input('Enter the price of the medicine: '))
+        stock = int(input('Enter the number of stock: '))
+        prescrip = int(input('Enter 1 if prescription is required, else 0: '))
+        st = "INSERT INTO medicines (medicineid, medicinename, category, dosage, manufacturer, expirydate, price, stockQuantity, prescriptionrequired) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)"
+        cur.execute(st, (med_id, med_name, category, dose, manufacturer, exp_dt, price, stock, prescrip))
         con.commit()
-    if op==2:
-        from datetime import date
-        dat=date.today()
-        print('delete medicine details')
-        st="select  ExpiryDate from  medicines"
-        cur.execute(st)
-        res=cur.fetchall()
-        for i in res:
-            if i[0]<=dat:
-                st1="delete from medicines where ExpiryDate='"+i[0]+"'"
-                cur.execute(st1)
-                con.commit()
-                print('deletion  done sucessfully')
-    if op==3:
+        print("Medicine details inserted successfully!")
+    elif op==2:
         print('update medicine details')
-        chan=input('what column  you want to change:')
-        med_iid=int(input('enter the  id of the medicine:'))
-        ch=int(input('enter {1} if the  value is int else {2} if the value is string:'))
-        if ch==1:
-            val=float(input('enter the new value:'))
-            s="update  medicines set '"+chan+"'='"+val+"' where med_id='"+med_iid+"'"
-            cur.execute(s)
-            con.commit()
-            print('update done sucessfully')
-        if ch==2:
-            val=input('enter the new value:')
-            s="update  medicines set '"+chan+"'='"+val+"' where med_id='"+med_iid+"'"
-            cur.execute(s)
-            con.commit()
-            print("updated  sucessfully")
-    if op==4:
+        med_iid = int(input('Enter the ID of the medicine: '))
+        chan = input('Enter the column name to update: ')
+        ch = int(input('Enter {1} if the value is int/float, else {2} if the value is string: '))
+        if ch == 1:
+            val = float(input('Enter the new value: '))
+        elif ch == 2:
+            val = input('Enter the new value: ')
+        s = f"UPDATE medicines SET {chan} = %s WHERE medicineid = %s"
+        cur.execute(s, (val, med_iid))
+        con.commit()
+        print('Update done successfully')
+    elif op==3:
         print('search  medicine details')
-
         med_nam=input('enter thee name of the medicine:')
         st2="select * from medicines where  MedicineName='"+med_nam+"'"
         cur.execute(st2)
@@ -96,16 +78,18 @@ def menu2():
         address=input('enter the address of the customer:')
         dob=input('enter the date of birth of the customer:')
         med_id=int(input('enter the id of the medicine:'))
-        s="insert into customers values('"+cust_id+"','"+first_name+"','"+last_name+"','"+email+"','"+phone+"',''"+address+"','"+dob+"','"+med_id+"'"
-        cur.execute(s)
+        pur_dat=input('enter purchase date:')
+        s="insert into cost(customerid,firstname,lastname,email,phonenumber,address,dateofbirth,medicineid,purchase_date) values(%s,%s,%s,%s,%s,%s,%s,%s,%s)"
+        cur.execute(s,(cust_id,first_name,last_name,email,phone,address,dob,med_id,pur_dat))
         con.commit()
         print("inserted sucessfully")
     if  op==2:
-        print('delete customer details')
-        cust_id=int(input('enter the id of the customer:'))
-        s="delete from customers where CustomerID='"+cust_id+"'"
-        cur.execute()
+        print('Delete customer details')
+        cust_id = int(input('Enter the ID of the customer: '))
+        s = "DELETE FROM cost WHERE CustomerID = %s"
+        cur.execute(s, (cust_id,))
         con.commit()
+        print("Deleted successfully")
     if   op==3:
         print('update customer details')
         chan=input('what column  you want to change:')
@@ -113,16 +97,16 @@ def menu2():
         ch=int(input('enter {1} if the  value is int else {2} if the value is string:'))
         if ch==1:
             val=float(input('enter the new value:'))
-            s="update COST set '"+chan+"'='"+val+"' where med_id='"+cust_iid+"'"
-            cur.execute(s)
+            s=f"update COST set {chan}=%s where customerid=%s"
+            cur.execute(s,(val,cust_iid))
             con.commit()
             print('update done sucessfully')
         if ch==2:
             val=input('enter the new value:')
-            s="update  COST set '"+chan+"'='"+val+"' where med_id='"+cust_iid+"'"
-            cur.execute(s)
+            s=f"update COST set {chan}=%s where customerid=%s"
+            cur.execute(s,(val,cust_iid))
             con.commit()
-            print("updated  sucessfully")
+            print('update done sucessfully')
     if   op==4:
         print('search customer details')
         cust_nam=input('enter the first name of the customer:')
@@ -147,7 +131,6 @@ def menu3():
     )
     cur=con.cursor()
     def generate_bill(customer_id,quantity):
-    # Fetch customer details
         cur.execute("""
             SELECT FirstName, LastName, Address, PhoneNumber ,dateofbirth
             FROM Customers 
